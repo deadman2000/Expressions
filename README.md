@@ -43,5 +43,4 @@ Expression.Eval("my.Test_Method_2000(null)", scope);
 
 ### TODO
 * arithmetic and boolean opertors
-* boolean keywords (true, false)
 * add system classes (Math, DateTime) by default

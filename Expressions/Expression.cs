@@ -219,6 +219,12 @@ namespace Expressions
             if (name.Equals("null"))
                 return null;
 
+            if (name.Equals("false"))
+                return false;
+
+            if (name.Equals("true"))
+                return true;
+
             object val;
             for (int i = 0; i < _scopes.Length; i++)
             {
