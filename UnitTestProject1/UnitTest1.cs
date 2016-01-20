@@ -57,6 +57,9 @@ namespace UnitTestProject1
             Dictionary<string, object> scope2 = new Dictionary<string, object>();
             scope.Add("test", new MyClass());
 
+            Assert.AreEqual(40, Expression.Eval("my.myVar", scope)); // Variable
+            Assert.AreEqual(50, Expression.Eval("my.MyProp", scope)); // Variable
+
             Assert.AreEqual(8, Expression.Eval("'abcdefgh'.Length", scope)); // String property call
             Assert.AreEqual("abc", Expression.Eval("my.StringMethod()", scope)); // Method execution
             Assert.AreEqual("def'", Expression.Eval(@"'def\''", scope)); //  String escaping '
